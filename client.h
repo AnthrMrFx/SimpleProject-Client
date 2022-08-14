@@ -26,17 +26,12 @@ private:
     QPushButton* sendMsgButton;
     QPushButton* disconnectButton;
 
-//    quint16 m_nNextBlockSize;
     QDataStream in;
 public:
-    Client(const QString& strHost, int nPort, QWidget *parent = nullptr);
-    ~Client();
+    Client(QWidget *parent = nullptr);
 
 private slots:
     void slotConnectToServer();
-//    void slotEnableSendMsgButton();
-//    void slotEnableConnectButton();
-//    void slotEnableDisconnectButton();
     void slotDisconnectFromServer();
     void slotReadyRead () ;
     void slotError(QAbstractSocket::SocketError) ;
